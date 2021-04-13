@@ -19,7 +19,7 @@ function setup(){
 
 
     ground = new Ground(600,height,1200,20);
-    stand1 = new Ground(300, height-100, 300, 50);
+    stand1 = new Ground(500, height-100, 300, 50);
     stand2 = new Ground(900, height-100, 300, 50);
 
     box1 = new Blocks(750, height- 150,40,70);
@@ -31,14 +31,14 @@ function setup(){
     box7 = new Blocks(990, height- 150,40,70);
     box8 = new Blocks(1030, height- 150,40,70);
 
-    box9 = new Blocks(150, height- 150,40,70);
-    box10 = new Blocks(190, height- 150,40,70);
-    box11 = new Blocks(230, height- 150,40,70);
-    box12 = new Blocks(270, height- 150,40,70);
-    box13 = new Blocks(310, height- 150,40,70);
-    box14 = new Blocks(350, height- 150,40,70);
-    box15 = new Blocks(390, height- 150,40,70);
-    box16 = new Blocks(430, height- 150,40,70);
+    box9 = new Blocks(350, height- 150,40,70);
+    box10 = new Blocks(390, height- 150,40,70);
+    box11 = new Blocks(430, height- 150,40,70);
+    box12 = new Blocks(470, height- 150,40,70);
+    box13 = new Blocks(510, height- 150,40,70);
+    box14 = new Blocks(550, height- 150,40,70);
+    box15 = new Blocks(590, height- 150,40,70);
+    box16 = new Blocks(630, height- 150,40,70);
 
    
     
@@ -58,6 +58,12 @@ Matter.Body.setPosition(hex1.body, {x: mouseX, y: mouseY})
 }
 function mouseReleased(){
     slingshot.fly();
+}
+
+function keyPressed(){
+    if(keyCode === 32){
+    slingshot.attach(hex1.body);
+    }
 }
 
 function draw(){
